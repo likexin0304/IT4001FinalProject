@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<device id="retina4_7" orientation="portrait">
+<adaptation id="fullscreen"/>
+</device>
+<dependencies>
+<deployment identifier="iOS"/>
+<plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+<capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+</dependencies>
+<scenes>
+<!--View Controller-->
+<scene sceneID="tne-QT-ifu">
+<objects>
+<viewController id="BYZ-38-t0r" customClass="ViewController" customModule="timer" customModuleProvider="target" sceneMemberID="viewController">
+<layoutGuides>
+<viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+<viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+</layoutGuides>
+<view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+<rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+<autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+<subviews>
+<button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cMs-Tm-EqY">
+<rect key="frame" x="0.0" y="516" width="375" height="151"/>
+<color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+<constraints>
+<constraint firstAttribute="height" constant="151" id="bqZ-dL-Cjz"/>
+</constraints>
+<state key="normal" title="Start/Pause">
+<color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+</state>
+<connections>
+<action selector="TouchStartorPause:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BTF-ky-4mX"/>
+</connections>
+</button>
+<button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="33d-Kv-o2V">
+<rect key="frame" x="0.0" y="28" width="160" height="30"/>
+<color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+<constraints>
+<constraint firstAttribute="height" constant="30" id="M9M-hM-P8C"/>
+<constraint firstAttribute="width" constant="160" id="OMb-nt-VnE"/>
+</constraints>
+<state key="normal" title="Reset">
+<color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+</state>
+<connections>
+<action selector="TouchRest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QPE-YF-Ugm"/>
+</connections>
+</button>
+<button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NHa-Pl-A7C">
+<rect key="frame" x="215" y="28" width="160" height="30"/>
+<color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+<constraints>
+<constraint firstAttribute="width" constant="160" id="IcC-bx-6m7"/>
+<constraint firstAttribute="height" constant="30" id="gAn-UB-TQm"/>
+</constraints>
+<state key="normal" title="Set Time">
+<color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+</state>
+<connections>
+<action selector="TouchSetTime:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uN1-V7-CbD"/>
+</connections>
+</button>
+<label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SpY-tO-lAc">
+<rect key="frame" x="0.0" y="152" width="375" height="86"/>
+<constraints>
+<constraint firstAttribute="height" constant="86" id="pmd-0c-nOD"/>
+</constraints>
+<fontDescription key="fontDescription" type="system" pointSize="40"/>
+<nil key="textColor"/>
+<nil key="highlightedColor"/>
+</label>
+<switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ncu-pS-TUW">
+<rect key="frame" x="163" y="262" width="51" height="31"/>
+<constraints>
+<constraint firstAttribute="width" constant="49" id="H1f-eq-Ooh"/>
+<constraint firstAttribute="height" constant="31" id="pTJ-L0-wAo"/>
+</constraints>
+<connections>
+<action selector="TouchSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="cE9-YX-oIq"/>
+</connections>
+</switch>
+</subviews>
+<color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+<constraints>
+<constraint firstItem="SpY-tO-lAc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="24w-LS-Jyd"/>
+<constraint firstItem="cMs-Tm-EqY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="7DK-DN-kyf"/>
+<constraint firstItem="ncu-pS-TUW" firstAttribute="top" secondItem="SpY-tO-lAc" secondAttribute="bottom" constant="24" id="Imc-pR-mBz"/>
+<constraint firstItem="NHa-Pl-A7C" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="Xlg-R0-hhu"/>
+<constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="cMs-Tm-EqY" secondAttribute="bottom" id="Xor-Hn-8l7"/>
+<constraint firstItem="33d-Kv-o2V" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dMK-r2-oeo"/>
+<constraint firstItem="SpY-tO-lAc" firstAttribute="top" secondItem="NHa-Pl-A7C" secondAttribute="bottom" constant="94" id="eos-20-zTM"/>
+<constraint firstAttribute="trailing" secondItem="cMs-Tm-EqY" secondAttribute="trailing" id="hbS-7B-SiI"/>
+<constraint firstItem="33d-Kv-o2V" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="m38-6N-jso"/>
+<constraint firstAttribute="trailing" secondItem="SpY-tO-lAc" secondAttribute="trailing" id="qBv-He-LhI"/>
+<constraint firstItem="ncu-pS-TUW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yna-Sl-PHA"/>
+<constraint firstAttribute="trailing" secondItem="NHa-Pl-A7C" secondAttribute="trailing" id="zZj-Z9-rkW"/>
+</constraints>
+</view>
+<connections>
+<outlet property="SetTimeButton" destination="NHa-Pl-A7C" id="SVv-X4-ZqJ"/>
+<outlet property="timeLabel" destination="SpY-tO-lAc" id="UdL-qW-Pgc"/>
+</connections>
+</viewController>
+<placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+</objects>
+<point key="canvasLocation" x="325.60000000000002" y="169.56521739130437"/>
+</scene>
+</scenes>
+</document>
